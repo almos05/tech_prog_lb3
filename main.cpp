@@ -7,9 +7,6 @@ public:
     Point(double x, double y) : x_(x), y_(y) {};
     virtual ~Point() = default;
 
-    //double getX() {return x_;}
-    //double  getY() {return y_;}
-
     virtual void draw(sf::RenderWindow& window) = 0;
     virtual void move(double dx, double dy) = 0;
     virtual void rotate(double angle) = 0;
@@ -135,7 +132,7 @@ protected:
     double w_;
 };
 
-class Square : public Parallelogram {
+class Square : public virtual Point, public Parallelogram {
 public:
     Square(double x1, double y1, double side) : Point(x1, y1), Parallelogram(x1, y1, x1, y1 + side, side) {
         w_ = side;
