@@ -19,12 +19,12 @@ protected:
 ```
 Point - Абстрактный базовый класс для представления точки на плоскости.
 
-Point(double x, double y) - Конструктор, инициализирующий координаты точки.
-double getX() - Метод для получения координаты x.
-double getY() - Метод для получения координаты y.
-virtual void draw(sf::RenderWindow& window) = 0 - Чисто виртуальный метод для отрисовки фигуры.
-virtual void move(double dx, double dy) = 0 - Чисто виртуальный метод для перемещения фигуры.
-virtual void rotate(double angle) = 0 - Чисто виртуальный метод для вращения фигуры.
+Point(double x, double y) - Конструктор, инициализирующий координаты точки. 
+double getX() - Метод для получения координаты x. 
+double getY() - Метод для получения координаты y. 
+virtual void draw(sf::RenderWindow& window) = 0 - Чисто виртуальный метод для отрисовки фигуры. 
+virtual void move(double dx, double dy) = 0 - Чисто виртуальный метод для перемещения фигуры. 
+virtual void rotate(double angle) = 0 - Чисто виртуальный метод для вращения фигуры. 
 
 ```cpp
 class Line : public Point {
