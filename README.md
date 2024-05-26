@@ -43,11 +43,11 @@ protected:
 
 Line - Класс для представления линии, унаследованный от Point.
 
-Line(double x1, double y1, double x2, double y2) - Конструктор, инициализирующий координаты начала и конца линии.
-void rotateAroundPoint(double cx, double cy, double angle) - Метод для вращения линии вокруг заданной точки.
-void draw(sf::RenderWindow& window) override - Метод для отрисовки линии.
-void move(double dx, double dy) override - Метод для перемещения линии.
-void rotate(double angle) override - Метод для вращения линии вокруг её первой точки.
+Line(double x1, double y1, double x2, double y2) - Конструктор, инициализирующий координаты начала и конца линии.  
+void rotateAroundPoint(double cx, double cy, double angle) - Метод для вращения линии вокруг заданной точки.  
+void draw(sf::RenderWindow& window) override - Метод для отрисовки линии.  
+void move(double dx, double dy) override - Метод для перемещения линии.  
+void rotate(double angle) override - Метод для вращения линии вокруг её первой точки.  
 
 ```cpp
 class Parallelogram : public virtual Point {
@@ -67,11 +67,11 @@ protected:
 
 Parallelogram - Класс для представления параллелограмма, унаследованный от Point.
 
-Parallelogram(double x1, double y1, double x2, double y2, double w) - Конструктор, инициализирующий координаты и ширину параллелограмма.
-~Parallelogram() - Деструктор, освобождающий память, выделенную под линии.
-void draw(sf::RenderWindow& window) override - Метод для отрисовки параллелограмма.
-void move(double dx, double dy) override - Метод для перемещения параллелограмма.
-void rotate(double angle) override - Метод для вращения параллелограмма.
+Parallelogram(double x1, double y1, double x2, double y2, double w) - Конструктор, инициализирующий координаты и ширину параллелограмма.  
+~Parallelogram() - Деструктор, освобождающий память, выделенную под линии.  
+void draw(sf::RenderWindow& window) override - Метод для отрисовки параллелограмма.  
+void move(double dx, double dy) override - Метод для перемещения параллелограмма.  
+void rotate(double angle) override - Метод для вращения параллелограмма.  
 
 ```cpp
 class Square : public Parallelogram {
@@ -89,13 +89,13 @@ protected:
 };
 ```
 
-Square - Класс для представления квадрата, унаследованный от Parallelogram.
+Square - Класс для представления квадрата, унаследованный от Parallelogram.  
 
-Square(double x1, double y1, double side) - Конструктор, инициализирующий координаты и сторону квадрата.
-~Square() - Деструктор, освобождающий память, выделенную под линии.
-void draw(sf::RenderWindow& window) override - Метод для отрисовки квадрата.
-void move(double dx, double dy) override - Метод для перемещения квадрата.
-void rotate(double angle) override - Метод для вращения квадрата.
+Square(double x1, double y1, double side) - Конструктор, инициализирующий координаты и сторону квадрата.  
+~Square() - Деструктор, освобождающий память, выделенную под линии.  
+void draw(sf::RenderWindow& window) override - Метод для отрисовки квадрата.  
+void move(double dx, double dy) override - Метод для перемещения квадрата.  
+void rotate(double angle) override - Метод для вращения квадрата.  
 
 ```cpp
 class Rectangle : public Parallelogram {
@@ -113,13 +113,13 @@ protected:
 };
 ```
 
-Rectangle - Класс для представления прямоугольника, унаследованный от Parallelogram.
+Rectangle - Класс для представления прямоугольника, унаследованный от Parallelogram.  
 
-Rectangle(double x1, double y1, double w, double h) - Конструктор, инициализирующий координаты, ширину и высоту прямоугольника.
-~Rectangle() - Деструктор, освобождающий память, выделенную под линии.
-void draw(sf::RenderWindow& window) override - Метод для отрисовки прямоугольника.
-void move(double dx, double dy) override - Метод для перемещения прямоугольника.
-void rotate(double angle) override - Метод для вращения прямоугольника.
+Rectangle(double x1, double y1, double w, double h) - Конструктор, инициализирующий координаты, ширину и высоту прямоугольника.  
+~Rectangle() - Деструктор, освобождающий память, выделенную под линии.  
+void draw(sf::RenderWindow& window) override - Метод для отрисовки прямоугольника.  
+void move(double dx, double dy) override - Метод для перемещения прямоугольника.  
+void rotate(double angle) override - Метод для вращения прямоугольника.  
 
 ```cpp
 class Rhombus : public Parallelogram {
@@ -138,18 +138,18 @@ protected:
 };
 ```
 
-Rhombus - Класс для представления ромба, унаследованный от Parallelogram.
+Rhombus - Класс для представления ромба, унаследованный от Parallelogram.  
 
-Rhombus(double x1, double y1, double side, double angle) - Конструктор, инициализирующий координаты, сторону и угол ромба.
-~Rhombus() - Деструктор, освобождающий память, выделенную под линии.
-void draw(sf::RenderWindow& window) override - Метод для отрисовки ромба.
-void move(double dx, double dy) override - Метод для перемещения ромба.
-void rotate(double angle) override - Метод для вращения ромба.
+Rhombus(double x1, double y1, double side, double angle) - Конструктор, инициализирующий координаты, сторону и угол ромба.  
+~Rhombus() - Деструктор, освобождающий память, выделенную под линии.  
+void draw(sf::RenderWindow& window) override - Метод для отрисовки ромба.  
+void move(double dx, double dy) override - Метод для перемещения ромба.  
+void rotate(double angle) override - Метод для вращения ромба.  
 
 ```cpp
 void clearShapes(std::vector<Point*>& shapes);
 int main();
 ```
 
-void clearShapes(std::vector<Point*>& shapes) - Функция для очистки всех фигур из вектора и освобождения памяти.
-int main() - Главная функция, запускающая окно и обрабатывающая события для создания, удаления, перемещения и вращения фигур.
+void clearShapes(std::vector<Point*>& shapes) - Функция для очистки всех фигур из вектора и освобождения памяти.  
+int main() - Главная функция, запускающая окно и обрабатывающая события для создания, удаления, перемещения и вращения фигур.  
