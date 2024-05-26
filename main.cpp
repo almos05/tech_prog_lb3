@@ -7,8 +7,8 @@ public:
     Point(double x, double y) : x_(x), y_(y) {};
     virtual ~Point() = default;
 
-    double getX() {return x_;}
-    double  getY() {return y_;}
+    //double getX() {return x_;}
+    //double  getY() {return y_;}
 
     virtual void draw(sf::RenderWindow& window) = 0;
     virtual void move(double dx, double dy) = 0;
